@@ -1,0 +1,26 @@
+import sys
+
+a = []
+b = []
+c = []
+
+with open("input 1") as file:
+    for line in file:
+        line = line.strip()
+        a.append(line)
+
+        def find_2020_3(self):
+            for num_1 in self:
+                for num_2 in self:
+                    for num_3 in self:
+                        searchsum = [int(num_1), int(num_2), int(num_3)]
+                        print (searchsum)
+                        print(sum(searchsum))
+                        if sum(searchsum) == 2020:
+                            print(searchsum[0] * searchsum[1] * searchsum[2])
+                            print(searchsum)
+                            sys.exit()
+                        else:
+                            continue
+
+    find_2020_3(a)

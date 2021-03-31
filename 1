@@ -1,0 +1,41 @@
+import sys
+
+data = []
+
+frog = []
+
+print(len(frog))
+
+with open("input 1") as file:
+    for line in file:
+        line= line.strip()
+        data.append(line)
+
+        print(len(data))
+
+    for number in data:
+        counter = 0
+        print("first loop")
+        while counter <= len(data):
+          #  print("second loop")
+          #  print(counter)
+          #  print(len(data))
+            if 2020 == int(number) + int(data[counter-1]):
+                print(number)
+                print(data[counter])
+                print("YEAAAAAAHHHHH")
+
+                print(int(number) * int(data[counter-1]))
+
+                sys.exit()
+
+            elif counter == len(data):
+            #    print("counter is up")
+             #   print(3)
+             #   print(data.pop(0))
+                data.pop(0)
+            else:
+              #  print(counter)
+             #   print(len(data))
+             #   print("check failed")
+                counter = counter + 1

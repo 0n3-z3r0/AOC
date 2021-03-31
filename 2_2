@@ -1,0 +1,35 @@
+data = []
+min = []
+max = []
+letter = []
+password = []
+datasplitted = []
+counter = 0
+password_counter = 0
+
+with open("input 2") as file:
+    for line in file:
+        line.strip()
+        data.append(line)
+
+    for line in data:
+        datasplitted.append(line.split(" "))
+
+    for line in datasplitted:
+        min_max_split = line[0].split("-")
+        min.append(min_max_split[0])
+        max.append(min_max_split[1])
+        letter.append(line[1])
+        password.append(line[2])
+
+    for line in letter:
+        line = line.strip(":")
+        firstletterbool = password[counter][int(min[counter]) - 1] == line
+        secondletterbool = password[counter][int(max[counter]) - 1] == line
+
+        if firstletterbool ^ secondletterbool:
+            password_counter = password_counter +1
+            counter = counter +1
+        else:
+            counter = counter +1
+    print(password_counter)
